@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "provider": "filesystem",
+      "test": [
+        "../api.yaml"
+      ]
+    }
+  ],
+  "report": {
+    "formatters": [
+      {
+        "type": "text",
+        "layout": "table"
+      }
+    ],
+    "types": {
+      "APICoverage": {
+        "OpenAPI": {
+          "successCriteria": {
+            "minThresholdPercentage": 44,
+            "maxMissedEndpointsInSpec": 4,
+            "enforce": true
+          },
+          "excludedEndpoints": [
+          ]
+        }
+      }
+    }
+  }
+}
